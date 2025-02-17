@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular18-project": {
+    "angular18-formio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular18-project",
+            "outputPath": "dist/angular18-formio",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -41,8 +41,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "4MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular18-project:build:production"
+              "buildTarget": "angular18-formio:build:production"
             },
             "development": {
-              "buildTarget": "angular18-project:build:development"
+              "buildTarget": "angular18-formio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,6 +95,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }

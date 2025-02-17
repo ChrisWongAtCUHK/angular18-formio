@@ -9,5 +9,5 @@ import { SimpleComponent } from './simple/simple.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'angular18-project';
+  title = 'angular18-formio';
 }
